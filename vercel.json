@@ -1,0 +1,12 @@
+{
+  "buildCommand": "cd client && npm install && npm run build",
+  "outputDirectory": "client/.next",
+  "installCommand": "cd client && npm install",
+  "framework": "nextjs",
+  "rewrites": [
+    {
+      "source": "/socket.io/(.*)",
+      "destination": "https://dark-chess-server.up.railway.app/socket.io/$1"
+    }
+  ]
+}
