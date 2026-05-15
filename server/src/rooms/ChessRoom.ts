@@ -9,8 +9,8 @@ import {
 } from "../state/GameState";
 
 export class ChessRoom extends Room<GameStateData> {
-  private chess: Chess;
-  private gameData: GameStateData;
+  private chess!: Chess;
+  private gameData!: GameStateData;
   private moveTimers: Map<string, NodeJS.Timeout> = new Map();
   private static readonly MOVE_TIMEOUT_MS = 30 * 60 * 1000;
   private static readonly ABANDON_TIMEOUT_MS = 60 * 1000;
