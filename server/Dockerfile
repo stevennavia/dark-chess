@@ -2,11 +2,12 @@ FROM node:18-alpine
 
 WORKDIR /app
 
-COPY server/package*.json ./
+COPY package*.json ./
 RUN npm ci --only=production
 
-COPY server/dist/ ./dist/
-COPY server/.env.production ./.env
+COPY dist/ ./dist/
+
+ENV PORT=2567
 
 EXPOSE 2567
 
