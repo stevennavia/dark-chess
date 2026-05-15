@@ -6,7 +6,7 @@ COPY server/package*.json ./
 RUN npm ci --only=production
 
 COPY server/dist/ ./dist/
-COPY server/.env ./
+COPY server/.env.production ./.env
 
 EXPOSE 2567
 
